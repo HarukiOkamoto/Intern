@@ -1,3 +1,3 @@
 <template>
-  <InternTask />
+  <div>a</div>
 </template>

@@ -1,15 +1,23 @@
 <template>
   <div class="ContentArea">
     <div class="ContentHead">
-      <h1>{{ Mock[key].BigTitle }}</h1>
-      <h4>{{ Mock[key].intro }}</h4>
+      <h1>{{ data.BigTitle }}</h1>
+      <h4>{{ data.intro }}</h4>
     </div>
-    <div class="ContentSericeArea" v-for="(content, index) in Mock[key].contents" :key="index">
+    <div
+      class="ContentSericeArea"
+      v-for="content in data.contents"
+      :key="content.ContentId"
+    >
       <div class="contentHead">
         <h2>{{ content.ContentTitle }}</h2>
+        <NuxtLink :to="generateURL(content.ContentId)">Link</NuxtLink>
         <h4>{{ content.ContentIntro }}</h4>
       </div>
-      <div v-for="(service, index) in content.services" :key="index">
+      <div
+        v-for="service in content.services"
+        :key="service.ServiceId"
+      >
         <p>{{ service.ServiceTitle }}</p>
         <p>{{ service.ServiceIntro }}</p>
         <p>{{ service.ServiceStar }}</p>

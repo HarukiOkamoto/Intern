@@ -9,12 +9,14 @@ export type HeadArea = {
 };
 
 export type content = {
+  ContentId: number;
   ContentTitle: string;
   ContentIntro: string;
   services: service[];
 };
 
 export type service = {
+  ServiceId: number;
   ServiceTitle: string;
   ServiceIntro: string;
   ServiceStar: string;
@@ -27,16 +29,19 @@ export const Mock: MockData = {
     intro: 'Introduction to Section 1',
     contents: [
       {
+        ContentId: 1,
         ContentTitle: 'Content 1',
         ContentIntro: 'Introduction to Content 1',
         services: [
           {
+            ServiceId: 1,
             ServiceTitle: 'Service 1',
             ServiceIntro: 'Introduction to Service 1',
             ServiceStar: '5',
             ServicePrice: 50,
           },
           {
+            ServiceId: 2,
             ServiceTitle: 'Service 2',
             ServiceIntro: 'Introduction to Service 2',
             ServiceStar: '4',
@@ -45,16 +50,19 @@ export const Mock: MockData = {
         ],
       },
       {
+        ContentId: 2,
         ContentTitle: 'Content 2',
         ContentIntro: 'Introduction to Content 1',
         services: [
           {
+            ServiceId: 1,
             ServiceTitle: 'Service 1',
             ServiceIntro: 'Introduction to Service 1',
             ServiceStar: '5',
             ServicePrice: 80,
           },
           {
+            ServiceId: 2,
             ServiceTitle: 'Service 2',
             ServiceIntro: 'Introduction to Service 2',
             ServiceStar: '4',
@@ -69,16 +77,19 @@ export const Mock: MockData = {
     intro: 'Introduction to Section 2',
     contents: [
       {
+        ContentId: 1,
         ContentTitle: 'Content 2',
         ContentIntro: 'Introduction to Content 2',
         services: [
           {
+            ServiceId: 1,
             ServiceTitle: 'Service 3',
             ServiceIntro: 'Introduction to Service 3',
             ServiceStar: '4.5',
             ServicePrice: 40,
           },
           {
+            ServiceId: 2,
             ServiceTitle: 'Service 4',
             ServiceIntro: 'Introduction to Service 4',
             ServiceStar: '3.5',
