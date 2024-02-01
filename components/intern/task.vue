@@ -20,9 +20,25 @@
 </template>
 
 <script setup lang="ts">
-import { Mock } from '@/types/mock.ts';
+import { Mock } from '@/types/mock';
 
 const route = useRoute();
 const { id } = route.params;
 const key = String(id);
+const data = Mock[key];
+
+const generateURL = (contentId: number) => {
+  let dynamicURL = '';
+  switch (contentId) {
+    case 1:
+      dynamicURL = 'https://test?id=500';
+      break;
+    case 2:
+      dynamicURL = 'https://test?id=750';
+      break;
+    default:
+      console.error('Unsupported ContentId');
+  }
+  return dynamicURL;
+};
 </script>
